@@ -27,7 +27,7 @@ func generate_chunk():
 	plane_mesh.subdivide_width = chunk_size * 0.5
 	
 	#TODO give it a material!
-	plane_mesh.material = preload("res://terrain_material.tres")
+	plane_mesh.material = preload("res://terrain.material")
 	
 	var surface_tool = SurfaceTool.new()
 	var data_tool = MeshDataTool.new()
