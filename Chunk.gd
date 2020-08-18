@@ -27,6 +27,7 @@ func generate_chunk():
 	plane_mesh.subdivide_width = chunk_size * 0.5
 	
 	#TODO give it a material!
+	# you may need to change to terrain.tres if that is your material extension
 	plane_mesh.material = preload("res://terrain.material")
 	
 	var surface_tool = SurfaceTool.new()
@@ -59,8 +60,9 @@ func generate_chunk():
 func generate_water():
 	var plane_mesh = PlaneMesh.new()
 	plane_mesh.size = Vector2(chunk_size, chunk_size)
-
-	plane_mesh.material = preload("res://water.tres")
+	
+	# you may need to change to water.tres if that is your material extension
+	plane_mesh.material = preload("res://water.material")
 	
 	var mesh_instance = MeshInstance.new()
 	mesh_instance.mesh = plane_mesh
